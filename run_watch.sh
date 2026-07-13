@@ -17,4 +17,4 @@ if [ "$#" -lt 1 ]; then
     exit 1
 fi
 
-caffeinate -dis python3 "$DIR/whitney_watch.py" "$@"
+caffeinate -dis python3 -u "$DIR/whitney_watch.py" "$@"

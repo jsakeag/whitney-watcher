@@ -46,6 +46,16 @@ whitney_watch.py DATE [flags]
 --raw                 print full JSON once and exit (no polling)
 ```
 
+## Run in background
+
+```bash
+nohup ./run_watch.sh 2026-10-25 > watch.log 2>&1 &
+disown
+tail -f watch.log        # check progress
+pgrep -f whitney_watch    # find the PID
+kill <PID>                 # stop it
+```
+
 ## Notes
 
 - Only works for dates inside the **quota season** (roughly May 1 – Nov 1).
